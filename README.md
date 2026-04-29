@@ -32,6 +32,29 @@ Main fields used:
 | COUNTRY | Customer country |
 | CUSTOMERNAME | Customer name |
 
+## Project Files
+
+| Path | Purpose |
+|---|---|
+| `src/sales_performance_analysis.py` | Clean reproducible Python script for sales aggregation |
+| `requirements.txt` | Python dependencies |
+| `outputs/` | Generated product, country, and monthly summaries |
+| `screenshots/` | Exported visualizations |
+
+## How to Run
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the analysis script:
+
+```bash
+python src/sales_performance_analysis.py
+```
+
 ## Methodology
 
 The analysis follows this workflow:
@@ -117,6 +140,18 @@ Revenue generally increases with order quantity, but outliers suggest that produ
 3. Analyze product line performance by country before scaling campaigns.
 4. Separate volume-driven growth from price-driven growth.
 5. Add margin data to move from sales analysis to profit analysis.
+
+## Code Quality Improvements
+
+The project now includes a reproducible script version of the analysis.
+
+The script:
+
+- separates loading, cleaning, aggregation, saving, and reporting into functions,
+- creates product-line, country, and monthly summaries,
+- saves generated outputs into `outputs/`,
+- calculates revenue share by product line and country,
+- uses clear naming and typed function signatures.
 
 ## Limitations
 
